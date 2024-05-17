@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d9d9d9; /* Light background color for contrast */
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add padding around the game */
+    background-color: #fff; /* Background color for the game container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    width: 90%;
+    max-width: 700px; /* Maximum width for larger screens */
+}
+
+#gameCanvas {
+    width: 100%; /* Make the canvas responsive */
+    height: 80vh; /* Adjust height to fit screen size */
+    max-height: 400px; /* Maximum height */
+    background-color: aliceblue;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+@media (max-width: 500px) {
+    p {
+        width: 40%;
+        padding: 20px;
+        font-size: 20px; /* Further adjust font size for smaller screens */
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#restartButton {
+    padding: 13px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px; /* Add margin to separate from other elements */
+}
+
+#restartButton:hover {
+    background-color: #45a049;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 600px) {
+    #restartButton {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+    
+    .game-container {
+        padding: 10px;
+    }
+
+    #gameCanvas {
+        height: 80vh; /* Adjust height for smaller screens */
+    }
+}
